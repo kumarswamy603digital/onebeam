@@ -133,7 +133,6 @@ class OpenAIAdapter implements LLMProvider {
   readonly vendor = "openai";
   
   async generateStructuredOutput(options) {
-    // 1. Transform tools to OpenAI format
     const openaiTools = options.tools.map(t => ({
       type: "function",
       function: { name: t.name, parameters: t.parameters }
@@ -171,8 +170,8 @@ All tools are defined once using a vendor-agnostic schema:
 interface ToolDefinition {
   name: string;
   description: string;
-  parameters: JSONSchema;          // Standard JSON Schema
-  requiredPermissions: Permission[]; // Onebeam permission system
+  parameters: JSONSchema;          
+  requiredPermissions: Permission[]; 
 }
 ```
 
@@ -277,14 +276,12 @@ const AGENT_CONFIGS: AgentConfig[] = [
     model: "gpt-5.2",
     allowedTools: ["readTask", "updateTask", "listTasks"],
     permissions: ["read:tasks", "write:tasks"],
-    // Cannot access: "write:workflows", "execute:workflows", etc.
   },
   {
     name: "readonly-agent", 
     model: "gemini-3",
     allowedTools: ["readTask", "listTasks"],
     permissions: ["read:tasks"],
-    // write:tasks is NOT granted — cannot modify anything
   }
 ];
 ```
