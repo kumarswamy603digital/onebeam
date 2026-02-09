@@ -565,21 +565,21 @@ npm run dev
 ```
 src/
 ├── core/
-│   ├── types.ts           # Core type definitions
-│   ├── providers.ts       # LLM provider adapters
-│   ├── tools.ts           # Tool registry & permissions
-│   ├── schema-validator.ts # JSON Schema validation
-│   └── agent-runtime.ts   # Execution engine
+│   ├── types.ts           
+│   ├── providers.ts      
+│   ├── tools.ts           
+│   ├── schema-validator.ts 
+│   └── agent-runtime.ts   
 ├── components/
-│   ├── ModelSelector.tsx  # Model switching UI
-│   ├── AgentSidebar.tsx   # Agent selection cards
-│   ├── ExecutionLogs.tsx  # Audit trail display
-│   ├── ToolCallDisplay.tsx # Tool call visualization
-│   ├── StructuredOutput.tsx # JSON output viewer
-│   └── PhaseIndicator.tsx  # Phase status display
+│   ├── ModelSelector.tsx  
+│   ├── AgentSidebar.tsx   
+│   ├── ExecutionLogs.tsx  
+│   ├── ToolCallDisplay.tsx 
+│   ├── StructuredOutput.tsx 
+│   └── PhaseIndicator.tsx  
 ├── pages/
-│   └── Index.tsx          # Main dashboard
-└── index.css              # Design system tokens
+│   └── Index.tsx          
+└── index.css              
 ```
 
 ---
@@ -632,6 +632,3 @@ Onebeam AI Agent Runtime demonstrates a production-ready approach to multi-model
 
 MIT License - See LICENSE file for details.
 
----
-
-*Built for the Onebeam AI Agent Engineer Internship*
